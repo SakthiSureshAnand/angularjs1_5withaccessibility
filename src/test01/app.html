@@ -1,0 +1,25 @@
+<div class="container">
+<div class="starter-template">
+        <h2>Book an Appointment</h2>
+         <h5>Our Investing Topics</h5>  
+         <h3>Pick a topic, then we'll find a time and place</h3>
+      </div>
+      <div class="row">
+   <div>
+      <div data-ng-repeat = "(key,value) in items" data-ng-class = "{'col-md-6' : lenOfJson === 5}">
+      <div data-ng-class="{'col-lg-6 col-md-6 col-sm-6 col-xs-12': lenOfJson>5,
+      'col-lg-12 col-md-12 col-sm-12 col-xs-12': lenOfJson === 5,
+      'col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3':lenOfJson === 1}" data-ng-repeat = "(key,val) in value">
+            <button type="button" class="btn btn-default btn-test1">{{val | translate}}</button>
+            </div>
+      </div>  
+   </div>
+      </div>
+      <div class="row text-center">
+         <button class="btn-default" data-ng-click="changeLang('fr')">{{trnsLng}}</button>
+      </div>
+
+      <div class="row text-center">
+      	<p> &lt; Return to home</p>
+      </div>
+</div>
